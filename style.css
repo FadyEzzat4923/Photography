@@ -533,20 +533,19 @@ a {
 .portfolio1-main .img .caption {
     z-index: 2;
     background-color: #f7ba01cc;
-    flex-flow: column;
     opacity: 0;
-    top: 0%;
+    top: 0;
     font-size: 0.8rem;
 }
 
-.portfolio1-main .img:hover .caption::after {
-    content: "";
+.portfolio1-main .caption-content {
+    flex-flow: column;
+    border: 7px solid #fff;
     width: 90%;
     height: 90%;
-    border: 3px solid #fff;
-    position: absolute;
-    top: auto;
-    bottom: auto;
+}
+
+.portfolio1-main .img:hover .caption-content {
     animation: decrease 1s;
 }
 
@@ -566,7 +565,7 @@ a {
     opacity: 1;
 }
 
-.portfolio1-main .img .caption div {
+.portfolio1-main .img .caption-content div {
     border: 1px solid #000;
     max-width: 150px;
     width: 100%;

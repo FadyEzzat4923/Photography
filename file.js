@@ -97,7 +97,7 @@ for (let i = 0; i < portfolioBar.length; i++) {
             });
         } else {
             portfolioBar[i].classList.add("active");
-            portfolioShow[i - 1].classList.add("active");
+            portfolioShow[i-1].classList.add("active");
         }
     }
 }
