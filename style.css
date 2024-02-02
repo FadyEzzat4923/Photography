@@ -475,12 +475,13 @@ a {
     z-index: 2;
     width: 100%;
     height: 100%;
-    opacity: 0;
+    display: none;
 }
 
-.teem .img:hover .img-hover {
+/* .teem .img:hover .img-hover {
+    display: block;
     opacity: 1;
-}
+} */
 
 .form input,
 .form textarea {
@@ -546,7 +547,7 @@ a {
 }
 
 .portfolio1-main .img:hover .caption-content {
-    animation: decrease 1s;
+    animation: decrease 1s 0.3s;
 }
 
 @keyframes decrease {
@@ -726,4 +727,115 @@ a {
 
 .line-width {
     width: 0 !important;
+}
+
+/* second screen */
+.second-screen,
+.third-screen {
+    overflow: auto;
+    top: 0;
+    left: 0;
+    background-color: #000000c5;
+    height: 100vh;
+    z-index: 999;
+}
+
+.third-screen {
+    z-index: 99999;
+}
+
+.second-screen.full-mode {
+    background-color: #000000ee;
+}
+
+.tools-bar {
+    max-width: 160px;
+    width: 40%;
+    background-color: #333;
+    border: 1px solid #333;
+}
+
+.tools-bar>div {
+    cursor: pointer;
+    color: #ddd;
+    transition: 0.4s;
+}
+
+.tools-bar>div:hover {
+    box-shadow: inset 0 0 3px 1px #fff;
+    color: #fff;
+}
+
+.tools-bar .full-screen.full {
+    pointer-events: none;
+    color: #777;
+}
+
+.center-img,
+.center-share {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.center-img img.full {
+    transform: scale(1.2);
+    cursor: grabbing;
+}
+
+.center-share {
+    border-radius: 5px;
+    width: 90%;
+    max-width: 500px;
+    min-width: 300px;
+}
+
+.center-share * {
+    font-family: sans-serif;
+}
+
+.xcolse {
+    font-size: 0.8rem;
+    color: #b7b7b7;
+    transition: 0s;
+}
+
+.xcolse:hover {
+    color: #333;
+}
+
+.brands-container {
+    flex-flow: wrap row;
+}
+
+.brand-icon {
+    border-radius: 3px;
+    color: #fff;
+    transition: 0s;
+}
+
+.brand-icon.b1 {
+    background-color: #3b5998;
+    transition: 0.3s;
+}
+
+.brand-icon.b2 {
+    background-color: #aa0719;
+    transition: 0.3s;
+}
+
+.brand-icon.b3 {
+    background-color: #007bff;
+    transition: 0.3s;
+}
+
+.brand-icon:hover {
+    color: var(--orange-color);
+    filter: brightness(95%);
+}
+
+.third-screen input {
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid gray;
 }

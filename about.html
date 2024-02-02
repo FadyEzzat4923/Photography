@@ -504,8 +504,8 @@
                         <li class="pe-2 ps-2">Contact</li>
                     </a>
                 </ul>
-                <div class="copyright text-center mt-3 mb-5">Copyright &copy;2023 <span
-                        class="color">Building</span> With
+                <div class="copyright text-center mt-3 mb-5">Copyright &copy;2023 <span class="color">Building</span>
+                    With
                     Webmaster <span class="color">Fady_Ezzat</span>. All rights Revierves Inc.</div>
             </div>
         </div>
@@ -515,6 +515,18 @@
     <script src="./JQuery_Library/jquery-3.7.0.min.js"></script>
     <!-- <script src="./file_jQuery.js"></script>
     <script src="file.js"></script> -->
+    <script>
+        $(() => {
+            for (let i = 0; i < $('.teem .img').length; i++) {
+                $('.teem .img').eq(i).hover(() => {
+                    $('.img-hover').eq(i).fadeIn(600);
+                } , () => {
+                    $('.img-hover').eq(i).fadeOut(600);
+                })
+            }
+        })
+        
+    </script>
 </body>
 
 </html>
